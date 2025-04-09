@@ -1,5 +1,5 @@
 local oldfromOrientation; oldfromOrientation = hookfunction(CFrame.fromOrientation, newcclosure(function(p, y, r)
-    if VisualsWTFConfig.silent and getgenv().SilentTarget and debug.info(3, "n") == "fire" then
+    if getgenv().VisualsWTFConfig.silent and getgenv().SilentTarget and debug.info(3, "n") == "fire" then
         local id, speed, drop = ProjectileDrop()
         local targetHead = getgenv().SilentTarget.model.Head
         if targetHead then
